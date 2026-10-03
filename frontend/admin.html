@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventEase | Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="admin-dashboard">
+        <aside class="admin-sidebar">
+            <h2>🎟 EventEase</h2>
+            <p>Admin Panel</p>
+
+            <nav>
+                <a href="#overview">📊 Overview</a>
+                <a href="#complaints">📋 Complaints</a>
+                <a href="index.html">🏠 Main Website</a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Manage your events and attendee complaints</p>
+                </div>
+                <span class="admin-profile">👤 Admin</span>
+            </header>
+
+            <section id="overview" class="admin-stats">
+                <div class="admin-stat-card">
+                    <h3>Total Complaints</h3>
+                    <p id="totalComplaints">0</p>
+                </div>
+
+                <div class="admin-stat-card">
+                    <h3>Submitted</h3>
+                    <p id="submittedComplaints">0</p>
+                </div>
+
+                <div class="admin-stat-card">
+                    <h3>In Progress</h3>
+                    <p id="progressComplaints">0</p>
+                </div>
+
+                <div class="admin-stat-card">
+                    <h3>Resolved</h3>
+                    <p id="resolvedComplaints">0</p>
+                </div>
+            </section>
+
+            <section id="complaints" class="admin-complaints">
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Complaint Management</h2>
+                        <p>View and manage attendee complaints</p>
+                    </div>
+                    <button onclick="loadAdminComplaints()">
+                        ↻ Refresh
+                    </button>
+                </div>
+
+                <div id="adminComplaintList">
+                    <p>Loading complaints...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

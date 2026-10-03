@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventEase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===============================
+         NAVBAR
+    ================================ -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EVENTEASE
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#events">Events</a>
+
+            <a href="#how-it-works">How It Works</a>
+
+            <a href="#support">Support</a>
+            <a href="#" onclick="openMyRegistrations(); return false;">
+    My Registrations
+</a>
+<a href="#" onclick="openMyComplaints(); return false;">
+    My Complaints
+</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ===============================
+         HERO
+    ================================ -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>EVENTEASE</h1>
+
+            <p>
+                Events Made Simple and Smart
+            </p>
+
+            <button onclick="scrollToEvents()">
+                Explore Events
+            </button>
+
+        </div>
+
+        <div class="scroll-indicator">
+            ↓ Scroll to explore
+        </div>
+
+    </section>
+
+
+    <!-- ===============================
+         EVENTS
+    ================================ -->
+
+    <section id="events" class="events-section">
+
+        <div class="section-title">
+
+            <span>DISCOVER</span>
+
+            <h2>Upcoming Events</h2>
+
+            <p>
+                Find events, experiences and activities you'll love.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search events..."
+                onkeyup="searchEvents()"
+            >
+
+        </div>
+
+
+        <!-- EVENT CARDS -->
+
+        <div class="event-grid" id="eventContainer">
+
+    <p>Loading events...</p>
+
+</div>
+<div class="view-all-container">
+    <button class="view-all-button" onclick="loadAllEvents()">
+        Keep Exploring ✨
+    </button>
+</div>
+
+    </section>
+
+
+    <!-- ===============================
+         HOW IT WORKS
+    ================================ -->
+
+    <section id="how-it-works" class="how-section">
+
+        <div class="section-title">
+
+            <span>SIMPLE PROCESS</span>
+
+            <h2>
+                How EventEase Works
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Discover
+                </h3>
+
+                <p>
+                    Browse and find events that interest you.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Register
+                </h3>
+
+                <p>
+                    Register for your selected event easily.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Get Your Seat
+                </h3>
+
+                <p>
+                    Receive your seat after successful confirmation.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Enjoy
+                </h3>
+
+                <p>
+                    Attend the event and enjoy the experience.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ===============================
+         FEATURES
+    ================================ -->
+
+    <section class="features-section">
+
+        <div class="section-title">
+
+            <span>EVENTEASE</span>
+
+            <h2>
+                Everything in One Place
+            </h2>
+
+        </div>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <div>🎫</div>
+
+                <h3>
+                    Easy Registration
+                </h3>
+
+                <p>
+                    Register for events quickly and easily.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div>💺</div>
+
+                <h3>
+                    Seat Allocation
+                </h3>
+
+                <p>
+                    Get your seat number after confirmation.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div>🔔</div>
+
+                <h3>
+                    Notifications
+                </h3>
+
+                <p>
+                    Stay updated with important event information.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div>🚨</div>
+
+                <h3>
+                    Support
+                </h3>
+
+                <p>
+                    Submit complaints when assistance is required.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ===============================
+         SUPPORT SECTION
+    ================================ -->
+
+    <section id="support" class="support-section">
+
+        <div>
+
+            <span>
+                NEED HELP?
+            </span>
+
+            <h2>
+                We're Here to Help.
+            </h2>
+
+            <p>
+                Facing an issue during an event?
+                Reach out to the organizers or submit a complaint.
+            </p>
+
+            <button onclick="openSupport()">
+                Contact Support
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===============================
+         FOOTER
+    ================================ -->
+
+    <footer>
+
+        <h2>
+            EVENTEASE
+        </h2>
+
+        <p>
+            Events Made Simple and Smart
+        </p>
+
+        <p class="copyright">
+            © 2026 EventEase
+        </p>
+
+    </footer>
+
+
+    <!-- ==================================================
+         EVENT DETAILS MODAL
+    =================================================== -->
+
+    <div id="eventModal" class="modal">
+
+        <div class="modal-box">
+
+            <button
+                class="close-button"
+                onclick="closeModal()">
+                ×
+            </button>
+
+            <span class="modal-label">
+                EVENT DETAILS
+            </span>
+
+            <h2 id="modalTitle">
+                Event Name
+            </h2>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         SUPPORT MODAL
+    =================================================== -->
+
+    <div id="supportModal" class="modal">
+
+        <div class="modal-box">
+
+            <button
+                class="close-button"
+                onclick="closeSupport()">
+                ×
+            </button>
+
+            <span class="modal-label">
+                EVENTEASE SUPPORT
+            </span>
+
+            <h2>
+                Need Help?
+            </h2>
+
+            <p class="support-text">
+                Facing an issue during an event?
+                You can contact our support team directly
+                or submit a complaint.
+            </p>
+
+
+            <!-- PHONE SUPPORT -->
+
+            <div class="support-contact">
+
+                <h3>
+                    📞 Contact Support
+                </h3>
+
+
+                <p>
+
+                    <strong>
+                        General Support
+                    </strong>
+
+                    <br>
+
+                    <a href="tel:+919000012345">
+                        +91 90000 12345
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Event Assistance
+                    </strong>
+
+                    <br>
+
+                    <a href="tel:+919000012346">
+                        +91 90000 12346
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Technical Support
+                    </strong>
+
+                    <br>
+
+                    <a href="tel:+919000012347">
+                        +91 90000 12347
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <!-- COMPLAINT -->
+
+            <div class="complaint-section">
+
+                <h3>
+                    📝 Submit a Complaint
+                </h3>
+
+
+                <input
+                    type="text"
+                    id="supportName"
+                    placeholder="Your Name"
+                >
+
+
+                <input
+                    type="email"
+                    id="supportEmail"
+                    placeholder="Your Email"
+                >
+                <input
+    type="tel"
+    id="supportPhone"
+    placeholder="Your 10-digit phone number"
+>
+
+<select id="complaintEvent">
+    <option value="">Select the event</option>
+</select>
+
+
+                <textarea
+                    id="supportIssue"
+                    placeholder="Describe your issue..."
+                    rows="5"
+                ></textarea>
+
+
+                <button
+                    class="register-button"
+                    onclick="submitComplaint()">
+
+                    Submit Complaint
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+<!-- ==================================================
+     MY REGISTRATIONS MODAL
+=================================================== -->
+
+<div id="myRegistrationsModal" class="modal">
+    <div class="modal-box">
+
+        <button class="close-button"
+                onclick="closeMyRegistrations()">
+            ×
+        </button>
+
+        <span class="modal-label">EVENTEASE</span>
+        <h2>My Registrations</h2>
+
+        <p class="support-text">
+            Enter the email and phone number you used
+            while registering for an event.
+        </p>
+
+        <label>Email Address</label>
+        <input
+            type="email"
+            id="lookupEmail"
+            placeholder="Enter your email"
+        >
+
+        <label>Phone Number</label>
+        <input
+            type="tel"
+            id="lookupPhone"
+            placeholder="Enter your 10-digit phone number"
+        >
+
+        <button
+            class="register-button"
+            onclick="findMyRegistrations()">
+            Find My Registrations
+        </button>
+
+        <div id="myRegistrationsResults"></div>
+
+    </div>
+</div>
+
+<!-- ==================================================
+     MY COMPLAINTS MODAL
+=================================================== -->
+
+<div id="myComplaintsModal" class="modal">
+    <div class="modal-box">
+
+        <button class="close-button"
+                onclick="closeMyComplaints()">
+            ×
+        </button>
+
+        <span class="modal-label">EVENTEASE</span>
+
+        <h2>My Complaints</h2>
+
+        <p class="support-text">
+            Enter the email and phone number you used
+            when submitting your complaint.
+        </p>
+
+        <label>Email Address</label>
+        <input
+            type="email"
+            id="complaintEmail"
+            placeholder="Enter your email"
+        >
+
+        <label>Phone Number</label>
+        <input
+            type="tel"
+            id="complaintPhone"
+            placeholder="Enter your 10-digit phone number"
+        >
+
+        <button
+            class="register-button"
+            onclick="findMyComplaints()">
+            Find My Complaints
+        </button>
+
+        <div id="myComplaintsResults"></div>
+
+    </div>
+</div>
+
+    <!-- ==================================================
+         REGISTRATION MODAL
+    =================================================== -->
+
+    <div id="registrationModal" class="modal">
+
+        <div class="modal-box">
+
+            <button
+                class="close-button"
+                onclick="closeRegistration()">
+                ×
+            </button>
+
+
+            <span class="modal-label">
+                EVENTEASE REGISTRATION
+            </span>
+
+
+            <h2>
+                Register for Event
+            </h2>
+
+
+            <p class="support-text">
+                Enter your details to register for the selected event.
+            </p>
+
+
+            <!-- SELECTED EVENT -->
+
+            <label>
+                Selected Event
+            </label>
+
+            <input
+                type="text"
+                id="registrationEvent"
+                readonly
+            >
+
+
+            <!-- NAME -->
+
+            <label>
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="registrationName"
+                placeholder="Enter your full name"
+            >
+
+
+            <!-- EMAIL -->
+
+            <label>
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="registrationEmail"
+                placeholder="Enter your email"
+            >
+
+
+            <!-- PHONE -->
+
+            <label>
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="registrationPhone"
+                placeholder="Enter your phone number"
+            >
+
+
+            <!-- PAYMENT -->
+
+            <label>
+                Payment Method
+            </label>
+
+            <select id="paymentMethod">
+
+                <option value="">
+                    Select payment method
+                </option>
+
+                <option value="UPI">
+                    UPI
+                </option>
+
+                <option value="Debit Card">
+                    Debit Card
+                </option>
+
+                <option value="Credit Card">
+                    Credit Card
+                </option>
+
+                <option value="Net Banking">
+                    Net Banking
+                </option>
+
+            </select>
+
+
+            <!-- CONFIRM -->
+
+            <button
+                class="register-button"
+                onclick="submitRegistration()">
+
+                Confirm Registration
+
+            </button>
+
+        </div>
+
+    </div>
+        <!-- ==================================================
+         REGISTRATION CONFIRMATION MODAL
+    =================================================== -->
+
+    <div id="confirmationModal" class="modal">
+
+        <div class="modal-box">
+
+            <button
+                class="close-button"
+                onclick="closeConfirmation()">
+                ×
+            </button>
+
+            <span class="modal-label">
+                EVENTEASE REGISTRATION
+            </span>
+
+            <h2>
+                Registration Confirmation
+            </h2>
+
+            <div id="confirmationContent"></div>
+
+            <button
+                class="register-button"
+                onclick="closeConfirmation()">
+
+                Done
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
